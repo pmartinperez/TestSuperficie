@@ -63,48 +63,57 @@ public class SuperficiesTest {
         
         //NO FUNCIONA el metodo assertEquals con objetos
         //assertEquals("", square, square2);
-        assertEquals(4, square.getSquareArea(), 0);
-        
-        
+        assertEquals(4, square.getSquareArea(), 0);     
     }
 
     /**
      * Test of calcularAreaRectangle method, of class Superficies.
      */
-    @Ignore
+    
     @Test
     public void testCalcularAreaRectangle() {
         System.out.println("calcularAreaRectangle");
-        Rectangle rectangle = null;
+        float result;
+        Rectangle rectangle= new Rectangle();
+        rectangle.setSideLength(2);
+        rectangle.setSideHeight(3);
         Superficies.calcularAreaRectangle(rectangle);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        
+        assertEquals(6, rectangle.getRectangleArea(), 0);
     }
 
     /**
      * Test of calcularAreaTriangle method, of class Superficies.
      */
-    @Ignore
+   
     @Test
     public void testCalcularAreaTriangle() {
         System.out.println("calcularAreaTriangle");
-        Triangle triangle = null;
+        float result;
+        Triangle triangle= new Triangle();
+        triangle.setBaseLength(2);
+        triangle.setHeight(3);
         Superficies.calcularAreaTriangle(triangle);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        
+        assertEquals(3, triangle.getTriangleArea(), 0);
     }
 
     /**
      * Test of calcularAreaCircle method, of class Superficies.
      */
-    @Ignore
+   
     @Test
     public void testCalcularAreaCircle() {
         System.out.println("calcularAreaCircle");
-        Circle circle = null;
+        float result;
+        Circle circle = new Circle();
+        circle.setRadius(2);
         Superficies.calcularAreaCircle(circle);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        
+        assertEquals(12.56, circle.getCircleArea(), 0.5); 
     }
     
 }
